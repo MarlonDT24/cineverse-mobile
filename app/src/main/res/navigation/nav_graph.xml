@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.matosa.cineversemobile.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.matosa.cineversemobile.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sessionsFragment"
+        android:name="com.matosa.cineversemobile.ui.home.SessionsFragment"
+        android:label="Sesiones"
+        tools:layout="@layout/fragment_sessions">
+        <action
+            android:id="@+id/action_sessionsFragment_to_seatsFragment"
+            app:destination="@id/seatsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.matosa.cineversemobile.ui.home.DetailFragment"
+        android:label="Detalle"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/action_detailFragment_to_sessionsFragment"
+            app:destination="@id/sessionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seatsFragment"
+        android:name="com.matosa.cineversemobile.ui.home.SeatsFragment"
+        android:label="Asientos"
+        tools:layout="@layout/fragment_seats">
+
+        <action
+            android:id="@+id/action_seatsFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.matosa.cineversemobile.ui.home.PaymentFragment"
+        android:label="Resumen Pago"
+        tools:layout="@layout/fragment_payment">
+
+        <action
+            android:id="@+id/action_paymentFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ticketDetailFragment"
+        android:name="com.matosa.cineversemobile.ui.tickets.TicketDetailFragment"
+        android:label="Detalle Entrada"
+        tools:layout="@layout/fragment_ticket_detail" />
+
+    <fragment
+        android:id="@+id/ticketsFragment"
+        android:name="com.matosa.cineversemobile.ui.tickets.TicketsFragment"
+        android:label="Mis Entradas"
+        tools:layout="@layout/fragment_tickets">
+
+        <action
+            android:id="@+id/action_ticketsFragment_to_ticketDetailFragment"
+            app:destination="@id/ticketDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.matosa.cineversemobile.ui.chat.ChatFragment"
+        android:label="Soporte"
+        tools:layout="@layout/fragment_chat" />
+
+</navigation>
