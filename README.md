@@ -1,4 +1,4 @@
-# CineVerse - Aplicación Móvil Nativa Android 📱
+# CineVerse - Aplicación Móvil Nativa Android
 
 **CineVerse Mobile** es la interfaz de usuario final del ecosistema CineVerse, diseñada para ofrecer una experiencia fluida en la consulta de cartelera, gestión de eventos especiales y reserva de entradas. Desarrollada como parte del Proyecto Final de Grado (DAM 2026).
 
